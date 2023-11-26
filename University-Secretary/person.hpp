@@ -17,10 +17,11 @@ private:
     string id;
     int age;
     char role;
-    static int ConstructorCalls;
+    
     friend class Secretary;
     
 public:
+    static int ConstructorCalls;
     Person();//constructor
     ~Person(); //destructor
     Person(const Person &other);//copy constructor
