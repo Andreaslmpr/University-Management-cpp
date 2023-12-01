@@ -10,17 +10,18 @@ class Person;       //forward declaration
 
 class Secretary{
 private:
-    vector<Person> database;
+    vector<Person*> database;
 public:
     Secretary();
     ~Secretary();
     Secretary(const Secretary& original);
-    void operator+(const Person& person);
-    void operator+=(const Person& person);
+    void operator+(Person* const person);
+    void operator+=(Person* const person);
+    void AddPerson(Person* const person);
     void operator=(const Secretary& newdatabase);
     friend ostream& operator<<(ostream& output, const Secretary& base);
     friend istream& operator>>(istream& input, Secretary& base);
-    bool FindPerson(string Id)const;
+    void FindPerson(string Id)const;
 };
 
 #endif

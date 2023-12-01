@@ -11,71 +11,105 @@ Secretary::Secretary(){
 
 //Destructor of a Secretary
 Secretary::~Secretary(){
-    cout<<"-----------DATA BASE REMOTE ACCESSED HAS BEEN LOST--------------(Destructor of Secretary)"<<endl;
-    this->database.clear();      
+    cout<<"-----------DATA BASE REMOTE ACCESS HAS BEEN LOST--------------(Destructor of Secretary)"<<endl;
+    for (Person* person : database) {
+        delete person; // Deallocate memory for each Person
+    }
+    database.clear();      
 
 }
 //Copy Constructor of a Secretary
 Secretary::Secretary(const Secretary& original) {
-    for (const Person& person : original.database) {
-        this->database.push_back(person); // Using push_back to add a copy of each person
+     for (const Person* person : original.database) {
+        this->database.push_back(new Person(*person)); // Using copy constructor to create a new Person
     }
 }
 
 
 // the ADD operand to add a person in the database vector of the SECRETARY
-void Secretary::operator+(const Person& person){
-    (this->database).push_back(person);
+//this type* const indicates that the pointer will be constant and cannot point out somewhere else
+
+void Secretary::operator+(Person* const person){  
+    this->database.push_back(person);
 }
 
-//Another version of ADD operand
-void Secretary::operator+=(const Person& person) {
-            this->database.push_back(person);
+    // Another version of ADD operand
+void Secretary::operator+=( Person* const person) {
+    this->database.push_back(person);
 }
 
-//operand<<
-ostream& operator<<(ostream& output, const Secretary& base){
-        for (const Person& person : base.database) {
-            output<<person;
-        }
-        return output;     
+void Secretary::AddPerson(Person* const person) { //Adds person to the vector function
+        *this+=person;
+    }
+
+// Operand <<
+ostream& operator<<(ostream& output, const Secretary& base) {
+    for (const Person* person : base.database) {
+        output << *person; // Using operator<< to print each person
+    }
+    return output;
 }
 
-//operand >>
+// Operand >>
 istream& operator>>(istream& input, Secretary& base) {
     while (true) {
-        Person person;
-        input >> person; // Calls the operator>> for Person to read the data
-        (base.database).push_back(person);  // Using the copy constructor
+        Person* person = new Person();  // Allocate memory for a new Person
+        if(!person){
+           cout<<"Error in Memory Allocatrion"<<endl;
+           exit(0);
+        }
+
+        input >> *person; // Calls the operator>> for Person to read the data
+        base.database.push_back(person);
 
         // Check new membership
-        cout <<endl<< "You are a member of University. For new Enroll press Y and any other key for exit: ";
+        cout <<endl << "You are a member of University. For new Enroll press Y and any other key for exit: ";
         char check;
         input >> check;
-        check=toupper(check);
-        if(check=='Y')continue;
+        check =toupper(check);
+        if (check == 'Y') continue;
         else break;
     }
 
     return input;
 }
 
-//Checks if a Person is in the Secretary Vector
-bool Secretary::FindPerson(string Id)const{
-    cout<<"-------------UNIVERSITY MEMBERSHIPS-------------------";
-    string targetId=Id;
-    for(const Person& person : this->database ){
-        if(person.Get_Id()==targetId){
-            cout<<endl;
-            cout<<"Your Person is : "<<endl;
-            cout<<person;
-            return true;
+// Checks if a Person is in the Secretary Vector
+void Secretary::FindPerson(string Id) const {
+    std::cout << "-------------UNIVERSITY MEMBERSHIPS-------------------";
+    std::string targetId = Id;
+    for (const Person* person : this->database) {
+        if (person->Get_Id() == targetId) {
+            cout <<endl;
+            cout << "Your Person is : " <<endl;
+            cout << *person; // Using operator<< to print the person
+            return;
+            
         }
-    }
-    cout<<"University Member not Found...."<<endl;
-    return false;
+         
+        }
+        
+        cout << "University Member not Found...." <<endl;
+
+   
 }
 
- void Secretary::operator=(const Secretary& newdatabase) { //Assignment Operator Overload
-            this->database = newdatabase.database; //Move new University to original University
+// Assignment Operator Overload
+void Secretary::operator=(const Secretary& newdatabase) {
+    // Clear existing data
+    for (Person* person : database) {
+        delete person; // Deallocate memory for each Person
+    }
+    database.clear();
+
+    // Copy new data
+    for (const Person* person : newdatabase.database) {
+        this->database.push_back(new Person(*person)); // Using copy constructor to create a new Person
+        if(!person){
+           cout<<"Error in Memory Allocatrion"<<endl;
+           exit(0);
         }
+    }
+}
+
+

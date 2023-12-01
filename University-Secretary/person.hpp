@@ -17,7 +17,6 @@ private:
     string id;
     int age;
     char role;
-    
     friend class Secretary;
     
 public:
