@@ -12,7 +12,13 @@ int Person::Get_ConstructorCalls(){
 }
 
 // Constructor
-Person::Person() : name(""), surname(""), id(""), age('0') ,role('\0') {
+Person::Person(string name,string surname,string id ,int age ):name(name),surname(surname),id(id),age(age){
+    ++ConstructorCalls;
+    
+}
+
+
+Person::Person() : name(""), surname(""), id(""), age('0') {
    ++ConstructorCalls;
 }
 
@@ -34,9 +40,6 @@ string Person::Get_Id()const{
     return this->id;
 }
 
-char Person::Get_Role()const{
-    return this->role;
-}
 
 //Copy Constructor
 Person::Person(const Person &other) {
@@ -44,14 +47,11 @@ Person::Person(const Person &other) {
   this->surname=other.surname;
   this->age = other.age;
   this->id =other.id;
-  this->role=other.role;
 }
 
 Person::~Person(){
     ConstructorCalls--;
 }
-
-
 
 bool isValidName(const string& name){
     // Check each character in the name
@@ -71,9 +71,9 @@ bool isValidName(const string& name){
 ostream& operator<<(ostream& output, const Person& person){
     output<<endl;
     output<<"------------------------------------------"<<endl;
-    if(person.role=='S'||person.role=='s') 
-    output<<"-------Student's Personal Info---------"<<endl;
-    else output<<"----Teacher's Personal Info----"<<endl;
+    //if(person.role=='S'||person.role=='s') 
+    //output<<"-------Student's Personal Info---------"<<endl;
+    //else output<<"----Teacher's Personal Info----"<<endl;
     output<<"-Name: ";
     output <<person.name<<endl;
     output<<"-Surname: ";
@@ -87,15 +87,6 @@ ostream& operator<<(ostream& output, const Person& person){
 
 istream& operator>>(istream& input, Person& person){
     cout<<endl<<"------------------------UNIVERSITY DATA BASE---------------------------(input stream person)"<<endl;
-    cout<<"Insert S for Student Enroll or T for Teacher Register:";
-
-    input >>person.role;
-    person.role=toupper(person.role);
-    while(person.role!='S'&&  person.role!='T'){
-        cout<<"-Invalid User Input-"<<endl;
-        cout<<"Please, Insert S for Student Enroll or T for Teacher Register ";
-        input>>person.role; 
-    }
 
     cout<<"-Insert the Name of the Person: ";
     if(!person.name.empty()) (person.name).clear(); //already existing name

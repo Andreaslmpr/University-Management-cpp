@@ -1,0 +1,9 @@
+Giorgos,Patsakas,19,3,2200144
+Andreas,Lampropoulos,21,6,2200252
+Giannis,Diplaris,19,5,2200041
+Kwstas,Haidemenos,19,4,2200262
+Lefteris,Konomhs,19,2,2200244
+Aris,Skylas,19,7,2200163
+Nikos,Tsirounis,19,1,2200420
+Nikitas,Karachalios,19,8,2200069
+Tzortzina,Siampoy,19,2,2200280

@@ -1,0 +1,77 @@
+Linear Algebra,1,6,True
+Discrete Mathematics,1,7,True
+Introduction to Computer Science and Telecommunications,1,2,False
+Introduction to Programming,1,7,True
+Logic Design Laboratory,1,2,False
+Logic Design,1,6,True
+Analysis I,2,8,True
+Computer Architecture I,2,7,True
+Data Structures and Programming Techniques,2,7,True
+Applied Mathematics,2,6,False
+Electromagnetism Optics and Modern Physics,2,8,True
+Analysis II,3,8,True
+Object-Oriented Programming,3,8,True
+Circuits and Systems Laboratory,3,2,False
+Probability and Statistics,3,6,True
+Signals and Systems,3,6,True
+Algorithms and Complexity,4,8,True
+Data Communication Networks I,4,6,True
+Data Communication Networks I Laboratory,4,2,False
+Communication Systems,4,7,True
+Database Design and Usage,4,7,True
+Numerical Analysis,5,6,False
+Principles of Programming Languages,5,6,False
+Computer Architecture II,5,6,False
+Graphics I,5,6,False
+Data Communication Networks II,5,6,False
+Data Communication Networks II Laboratory,5,2,False
+Waves Waveguides Antennas,5,6,False
+Operating Systems,5,8,True
+Parallel Systems,5,6,False
+Digital System Design - VHDL,5,6,False
+Artificial Intelligence I,5,6,False
+Telecommunication Networks,5,6,False
+Database Systems Implementation,5,6,False
+Digital Signal Processing,5,6,False
+Algorithm Fundamentals of Machine Learning,6,6,False
+Pattern Recognition – Machine Learning,6,6,False
+Algorithm Analysis/Design I,6,6,False
+Databases II,6,6,False
+Operational Research,6,6,False
+Computer Electronics,6,6,False
+Quantum Computing,6,6,False
+Microwave Telecommunication,6,6,False
+Microwave Design,6,6,False
+Simulation and Analysis of Telecommunication Systems,6,6,False
+Stochastic Processes I,6,6,False
+Functional and Logical Programming,6,6,False
+Embedded System Design,6,6,False
+Telecommunication Networks II,6,6,False
+Computational Physics,6,6,False
+Intelligent Systems,7,6,False
+Information and Network Security,7,6,False
+Advanced Database Systems,7,6,False
+Cryptography,7,6,False
+System Programming,7,6,False
+Wireless Communications,7,6,False
+Optical Communication Systems,7,6,False
+Biomedical Signal Processing,7,6,False
+Cloud Computing,7,6,False
+Web Technologies,7,6,False
+Human-Computer Interaction,7,6,False
+Real-time Systems,7,6,False
+Distributed Systems,7,6,False
+Multimedia Systems,7,6,False
+Natural Language Processing,7,6,False
+Big Data Analytics,8,6,False
+Internet of Things (IoT),8,6,False
+Machine Learning Applications,8,6,False
+Robotics and Automation,8,6,False
+Virtual Reality and Augmented Reality,8,6,False
+Quantum Information Processing,8,86,False
+Network Management and Security,8,6,False
+Information Retrieval,8,6,False
+Advanced Computer Graphics,8,6,False
+Entrepreneurship in Information Technology,8,6,False
+Project Management,8,6,False
+Thesis (Final Year Project),8,10,True

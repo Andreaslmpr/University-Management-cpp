@@ -11,24 +11,23 @@ using namespace std;
 class Secretary; // forward declaration
 
 class Person{
-private:
+protected:
     string name;
     string surname;
     string id;
     int age;
-    char role;
     friend class Secretary;
     
 public:
     static int ConstructorCalls;
-    Person();//constructor
+    Person(string name,string surname,string id ,int age);//constructor initialization list
+    Person();//default
     ~Person(); //destructor
     Person(const Person &other);//copy constructor
     //Accessors
     int Get_Age()const;
     string Get_Name()const;
     string Get_Surname()const;
-    char Get_Role()const;
     string Get_Id()const;
 
     static int Get_ConstructorCalls();//Counter Constructor Calls
@@ -37,9 +36,11 @@ public:
     friend ostream& operator<<(ostream& output, const Person& person);
     friend ostream& operator<<(ostream& output, const vector<Person>& base);
     friend istream& operator>>(istream& input, vector<Person>& base);
-
+    bool isValidName(const string& name);
 
 };
+
+bool isValidName(const string& name);
 
 
 #endif //PERSON_HPP

@@ -1,18 +1,22 @@
 CC = g++
-CFLAGS = -g -Wall -Werror
+CFLAGS = -Wall -Werror
 LDFLAGS = -lm
 
-SRCS = person.cpp secretary.cpp main.cpp
+SRCS = person.cpp secretary.cpp professor.cpp course.cpp semester.cpp student.cpp handlecoursefile.cpp handleprofessorfile.cpp handlestudentfile.cpp main.cpp
+
+# Adjusting flags for C++ compilation
+CXXFLAGS = $(CFLAGS)
+
 OBJS = $(SRCS:.cpp=.o)
 EXEC = main
 
 all: $(EXEC)
 
 $(EXEC): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(EXEC) $(LDFLAGS)
+	$(CC) $(CXXFLAGS) $(OBJS) -o $(EXEC) $(LDFLAGS)
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS) $(EXEC)
