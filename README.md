@@ -1,9 +1,21 @@
-Το πρόγραμμα αυτό αποτελεί ένα απλό σύστημα διαχείρισης Γραμματείας Πανεπιστημίου, επιτρέποντας τη διαχείριση φοιτητών, καθηγητών, μαθημάτων και εξαμήνων ,ακολουθωντας την δομη του μερους Α με στοιχεια κληρονομικοτητας στις οντοτητες που χρησιμοποιουνται. Ακολουθήστε τα παρακάτω βήματα για να χρησιμοποιήσετε το πρόγραμμα:
+This program is a simple University Secretariat management system, allowing the management of students, professors, courses and semesters, following the structure of part A with elements of inheritance in the entities used. Follow the steps below to use the program:
 
-New Integrated Terminal in The Current File make ./main
+After compiling, run the generated executable to start the program. Program Options: The program presents a menu with various options. Select an option by entering the corresponding number and pressing Enter.
 
-Μετά τη μεταγλώττιση, εκτελέστε το εκτελέσιμο που δημιουργήθηκε για να ξεκινήσει το πρόγραμμα. Επιλογές του Προγράμματος: Το πρόγραμμα παρουσιάζει ένα μενού με διάφορες επιλογές. Επιλέξτε μια επιλογή εισάγοντας τον αντίστοιχο αριθμό και πατώντας Enter.
+Program Options: Modify Instructor Modify Student Modify Course Assign Instructors to Courses Enroll Student in Course Assign Grades by Instructor Record and Save Students Who Passed a Specific Course in a Semester Print Instructor Semester Statistics for All Courses Print Detailed Grades for Student Enroll Student in All courses and generate automatic grades Print a list of students eligible for graduation
 
-Επιλογές Προγράμματος: Τροποποίηση καθηγητή Τροποποίηση μαθητή Τροποποίηση μαθήματος Ανάθεση καθηγητών σε μαθήματα Εγγραφή φοιτητή σε μάθημα Καθορισμός βαθμών από καθηγητή Καταγραφή και αποθήκευση φοιτητών που πέρασαν ένα συγκεκριμένο μάθημα σε ένα εξάμηνο Εκτύπωση στατιστικών εξαμήνου καθηγητή για όλα τα μαθήματα Εκτύπωση αναλυτικών βαθμών για μαθητή Εγγραφή μαθητή σε όλα τα μαθήματα και δημιουργία αυτόματων βαθμών Εκτύπωση λίστας φοιτητών που είναι επιλέξιμοι για αποφοίτηση
+Exiting the Program: To exit the program, select an option from the menu or press any key other than the options listed.
 
-Έξοδος από το Πρόγραμμα: Για έξοδο από το πρόγραμμα, επιλέξτε μια επιλογή από το μενού ή πατήστε οποιοδήποτε πλήκτρο εκτός από τις επιλογές που αναφέρονται.
+
+
+
+
+
+
+
+
+
+
+
+
+
