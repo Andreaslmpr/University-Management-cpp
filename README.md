@@ -1,10 +1,27 @@
-This program is a simple University Secretariat management system, allowing the management of students, professors, courses and semesters, following the structure of part A with elements of inheritance in the entities used. Follow the steps below to use the program:
+# 🎓 University Management System – C++
 
-After compiling, run the generated executable to start the program. Program Options: The program presents a menu with various options. Select an option by entering the corresponding number and pressing Enter.
+This project is a university administration system developed in C++, designed to manage academic roles and processes such as students, professors, courses, grades, and graduation requirements. It was developed as part of coursework in Object-Oriented Programming.
 
-Program Options: Modify Instructor Modify Student Modify Course Assign Instructors to Courses Enroll Student in Course Assign Grades by Instructor Record and Save Students Who Passed a Specific Course in a Semester Print Instructor Semester Statistics for All Courses Print Detailed Grades for Student Enroll Student in All courses and generate automatic grades Print a list of students eligible for graduation
+## ✨ Key Features
+- Role-based structure: Students, Professors, Secretaries
+- Course management across 8 academic semesters
+- Grade assignment and performance tracking
+- Graduation eligibility checks based on ECTS and course completion
+- File persistence for course records (`courses.txt`)
+- Operator overloading for user-friendly I/O
+- Extensive use of OOP principles: inheritance, encapsulation, polymorphism
 
-Exiting the Program: To exit the program, select an option from the menu or press any key other than the options listed.
+## 📦 Technologies
+- C++ (Standard Library)
+- Object-Oriented Design
+- CLI-based interaction
+- File I/O operations
+
+## 🛠 Build & Run
+```bash
+make
+./main
+
 
 
 
