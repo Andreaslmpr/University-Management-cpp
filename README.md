@@ -17,10 +17,6 @@ This project is a university administration system developed in C++, designed to
 - CLI-based interaction
 - File I/O operations
 
-## 🛠 Build & Run
-```bash
-make
-./main
 
 
 
